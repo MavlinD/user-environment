@@ -1,0 +1,6 @@
+[user]
+	email = mavlind@list.ru
+	name = Mavlin Dm.
+[core]
+	editor = micro
+	excludesfile = /home/mdv/.gitignore_global

@@ -1,0 +1,7 @@
+*
+!.gitignore
+!.gitignore_global
+!.bash_tools
+!.bash_tools/*
+!.bash_aliases_hosting
+!.gitconfig

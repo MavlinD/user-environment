@@ -1,0 +1,49 @@
+#!/bin/sh
+
+alias upd='sudo apt update'
+alias ins='sudo apt install'
+
+alias d='docker'
+alias m="micro"
+alias pn='/usr/bin/python3'
+alias pip='pip3'
+alias p='pnpm'
+
+alias dus='du -a -h --max-depth=1 | sort -hr'
+
+alias dl='docker logs -f'
+alias dcu="docker-compose up"
+alias dc="docker-compose"
+alias ds="docker stop"
+alias dps="docker ps"
+alias dpsc="bash ~/.bash_tools/dps.sh"
+alias dcup="docker-compose up --build --remove-orphans"
+alias dcs="docker-compose stop"
+alias dsa='docker stop $(docker ps -a -q)'
+alias ds='docker stop'
+alias dsa='docker kill $(docker ps -q)'
+alias drc='docker rm $(docker ps --filter status=exited -q)'
+
+alias gs="git status"
+alias gbr="git branch"
+alias gcl="git clone"
+alias gm="git merge"
+alias gr="git reset"
+alias grem="git remote"
+alias ga="git add ."
+alias gac="git add . && git commit"
+alias gc="git commit"
+alias gpush="git push"
+alias gd="git diff"
+alias gch="git checkout"
+alias gpul="git pull"
+alias curltime="curl -w \"@$HOME/.curl-format.txt\" -o /dev/null -s "
+alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+alias rel="source ~/.bashrc"
+alias bed="micro ~/.bashrc"
+alias shb="bat ~/.bashrc"
+alias gpnb="git push --set-upstream origin"
+alias m="micro"
+alias nv="npm version"
+alias pi="pnpm install"
+alias p="pnpm"

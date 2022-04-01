@@ -1,0 +1,16 @@
+.idea
+venv
+*/**/node_modules*
+node_modules
+local_settings.py
+__pycache__/
+*/__pycache__/
+*.py[cod]
+.pyc
+
+*.sqlite3
+
+*/**/temp/
+.pytest*
+*/.pytest*
+*/**/.pytest*
