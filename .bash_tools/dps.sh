@@ -29,10 +29,14 @@
 function dps () {
 		# по умолчанию сортировка произв-ся по 2-му столбцу
 		# dpsc 1 - сортировка по имени
-		order=${1:-2}
+		if [[ $1 ]]; then
+			order=-k$1
+		else
+			order=-mk2
+		fi;
         command docker ps --format \
         "table {{.Names}}==>>{{.Status}}==>>{{.Networks}}==>>{{.Ports}}" \
-        | (read -r; printf "%s\n" "$REPLY"; sort -k $order ) \
+        | (read -r; printf "%s\n" "$REPLY"; sort $order ) \
             | /bin/column -t -s '==' -o ' ' \
 			| gawk 'BEGIN {FS=">>"} {if (NR%2==0) {printf "\033[0;48;5;233m"}}
  			{if (NR==1) printf "%1$s %2$s %3$s %4$s\n",
